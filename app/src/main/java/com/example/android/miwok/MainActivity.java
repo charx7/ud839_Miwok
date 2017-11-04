@@ -19,6 +19,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,10 +31,29 @@ public class MainActivity extends AppCompatActivity {
 
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
+
+        /**
+         * Crea un nuevo objeto del tipo llamado clicklistener del tipo definido en el
+         * constructor que esta en NumbersClickListener usando el constructor
+         */
+        NumbersClickListener clickListener = new NumbersClickListener();
+        /**
+         * Encuentra la View que muestra la viste llamada numbers con el metodo find view byid
+         */
+        TextView numbers = (TextView) findViewById(R.id.numbers);
+        /**
+         * Establece un mètodo set on click listener y el objeto creado
+         * con el constructor de numbersclicklistener como el input
+         */
+        numbers.setOnClickListener(clickListener);
     }
+
+    /**codigo para llamar a otra view haciendo referencia a un xml
     public void openNumbersList(View view){
         Intent numbers = new Intent(this, Numbers.class); /* Hace referencia al .java
-        de numbers */
+        de numbers
         startActivity(numbers);
-    }
+     }
+    **/
 }
+
