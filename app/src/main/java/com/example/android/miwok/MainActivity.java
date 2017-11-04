@@ -35,8 +35,10 @@ public class MainActivity extends AppCompatActivity {
         /**
          * Crea un nuevo objeto del tipo llamado clicklistener del tipo definido en el
          * constructor que esta en NumbersClickListener usando el constructor
+         * NumbersClickListener clickListener = new NumbersClickListener; esta version crea
+         * el objeto inline cuando se llama al metodo de la interfaz
          */
-        NumbersClickListener clickListener = new NumbersClickListener();
+
         /**
          * Encuentra la View que muestra la viste llamada numbers con el metodo find view byid
          */
@@ -45,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
          * Establece un mètodo set on click listener y el objeto creado
          * con el constructor de numbersclicklistener como el input
          */
-        numbers.setOnClickListener(clickListener);
+        numbers.setOnClickListener(new NumbersClickListener());
     }
 
     /**codigo para llamar a otra view haciendo referencia a un xml
