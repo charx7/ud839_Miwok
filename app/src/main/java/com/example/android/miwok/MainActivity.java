@@ -52,6 +52,39 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(numbersActivity);
             }
         });
+
+        //** Lo mismo pero ahora para la otra actividad Family_Members
+        TextView familyMembersView = (TextView) findViewById(R.id.family);
+        familyMembersView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent familyMembersActivity = new Intent(MainActivity.this,
+                        Family_Members.class);
+                startActivity(familyMembersActivity);
+            }
+        });
+
+        //**Ahora para la actividad Colors
+        TextView colorsView = (TextView) findViewById(R.id.colors);
+        colorsView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent colorsActivity = new Intent(MainActivity.this,
+                        Colors.class);
+                startActivity(colorsActivity);
+            }
+        });
+
+        //**Ahora para phrases
+        TextView phrasesView = (TextView) findViewById(R.id.phrases);
+        phrasesView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent phrasesActivity = new Intent(MainActivity.this,
+                        Phrases.class);
+                startActivity(phrasesActivity);
+            }
+        });
     }
 
     /**codigo para llamar a otra view haciendo referencia a un xml
