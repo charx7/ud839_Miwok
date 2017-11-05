@@ -23,16 +23,16 @@ public class Family_Members extends AppCompatActivity {
         /**
          * Añade la lista de palabras en ingles y miwok
          */
-        palabras.add(new Word("father", "әpә"));
-        palabras.add(new Word("mother", "әṭa"));
-        palabras.add(new Word("son", "angsi"));
-        palabras.add(new Word("daughter", "tune"));
-        palabras.add(new Word("older brother", "taachi"));
-        palabras.add(new Word("younger brother", "chalitti"));
-        palabras.add(new Word("older sister", "teṭe"));
-        palabras.add(new Word("younger sister", "kolliti"));
-        palabras.add(new Word("grandmother", "ama"));
-        palabras.add(new Word("grandfather", "paapa"));
+        palabras.add(new Word("father", "әpә", R.drawable.family_father));
+        palabras.add(new Word("mother", "әṭa",R.drawable.family_mother));
+        palabras.add(new Word("son", "angsi", R.drawable.family_son));
+        palabras.add(new Word("daughter", "tune", R.drawable.family_daughter));
+        palabras.add(new Word("older brother", "taachi", R.drawable.family_older_brother));
+        palabras.add(new Word("younger brother", "chalitti", R.drawable.family_younger_brother));
+        palabras.add(new Word("older sister", "teṭe", R.drawable.family_older_sister));
+        palabras.add(new Word("younger sister", "kolliti", R.drawable.family_younger_sister));
+        palabras.add(new Word("grandmother", "ama", R.drawable.family_grandmother));
+        palabras.add(new Word("grandfather", "paapa", R.drawable.family_grandfather));
 
         /**
          * Manera chevere de crear los views de una lista rapido y con memoria reciclandose

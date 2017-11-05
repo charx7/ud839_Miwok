@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -38,16 +39,16 @@ public class Numbers extends AppCompatActivity {
          */
         ArrayList<Word> palabras = new ArrayList<Word>();
 
-        palabras.add(new Word("one", "lutti"));
-        palabras.add(new Word("two", "otiiko"));
-        palabras.add(new Word("three", "tolookosu"));
-        palabras.add(new Word("four", "oyyisa"));
-        palabras.add(new Word("five", "massokka"));
-        palabras.add(new Word("six", "tommokaa"));
-        palabras.add(new Word("seven", "kenekaku"));
-        palabras.add(new Word("eight", "kawinta"));
-        palabras.add(new Word("nine", "wo e"));
-        palabras.add(new Word("ten", "na aacha"));
+        palabras.add(new Word("one", "lutti", R.drawable.number_one));
+        palabras.add(new Word("two", "otiiko", R.drawable.number_two));
+        palabras.add(new Word("three", "tolookosu",R.drawable.number_three));
+        palabras.add(new Word("four", "oyyisa",R.drawable.number_four));
+        palabras.add(new Word("five", "massokka",R.drawable.number_five));
+        palabras.add(new Word("six", "tommokaa",R.drawable.number_six));
+        palabras.add(new Word("seven", "kenekaku",R.drawable.number_seven));
+        palabras.add(new Word("eight", "kawinta", R.drawable.number_eight));
+        palabras.add(new Word("nine", "wo e",R.drawable.number_nine));
+        palabras.add(new Word("ten", "na aacha",R.drawable.number_ten));
 
 
         /* Log.v("NumbersActivity", "Palabra en el indice " + palabras.get(0));
