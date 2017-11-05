@@ -1,0 +1,50 @@
+package com.example.android.miwok;
+
+import android.app.Activity;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
+
+import java.util.ArrayList;
+
+/**
+ * Created by Charx on 04/11/2017.
+ */
+
+public class WordAdapter extends ArrayAdapter<Word>{
+    //constructor de la clase WordAdapter
+    public WordAdapter(Activity context, ArrayList<Word> palabras){
+        super(context, 0 , palabras);
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        // Verifica si la vista existente esta siendo reusada, si no la reinfla con cosas nuevas
+        View listItemView = convertView;
+        if (listItemView == null){
+            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item,parent ,false);
+        }
+
+        // Jala el par de palabras de la clase costum Word de la posicion en la lista
+        Word currentWord = getItem(position);
+
+        //Obtiene el ID y modifica la view con la informacion a desplegar correspondiente a palabra
+        //en ingles
+        TextView englishTextView = (TextView) listItemView.findViewById(R.id.palabraIngles);
+        englishTextView.setText(currentWord.getDefaultTranslation());
+
+        //Obtiene el ID y modifica la view con la informacion a desplegar correspondiente a palabra
+        //en miwok
+        TextView miwokTextView = (TextView) listItemView.findViewById(R.id.traduccion);
+        miwokTextView.setText(currentWord.getMiwokTranslation());
+
+        return listItemView;
+    }
+}

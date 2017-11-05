@@ -36,18 +36,21 @@ public class Numbers extends AppCompatActivity {
         Log.v("NumbersActivity","Palabra en el index 0 " + cadenaNumeros[0]);
         old
          */
-        ArrayList<String> numbersList = new ArrayList<String>();
-        numbersList.add("One");
-        numbersList.add("Two");
-        numbersList.add("Three");
-        numbersList.add("Four");
-        numbersList.add("Five");
-        numbersList.add("Six");
-        numbersList.add("Seven");
-        numbersList.add("Eight");
-        numbersList.add("Nine");
-        numbersList.add("Ten");
-        Log.v("NumbersActivity", "Palabra en el indice " + numbersList.get(0));
+        ArrayList<Word> palabras = new ArrayList<Word>();
+
+        palabras.add(new Word("one", "lutti"));
+        palabras.add(new Word("two", "otiiko"));
+        palabras.add(new Word("three", "tolookosu"));
+        palabras.add(new Word("four", "oyyisa"));
+        palabras.add(new Word("five", "massokka"));
+        palabras.add(new Word("six", "tommokaa"));
+        palabras.add(new Word("seven", "kenekaku"));
+        palabras.add(new Word("eight", "kawinta"));
+        palabras.add(new Word("nine", "wo e"));
+        palabras.add(new Word("ten", "na aacha"));
+
+
+        /* Log.v("NumbersActivity", "Palabra en el indice " + palabras.get(0));
 
         /* Vieja version para agregar los views sin ser dinamicas (memoria fija)
         int i = 0;
@@ -61,10 +64,11 @@ public class Numbers extends AppCompatActivity {
         */
         /**
          * Manera chevere de crear los views de una lista rapido y con memoria reciclandose
+         *  ahora con un adaptador custom
          */
-        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.activity_list_item, numbersList);
+        WordAdapter Adapter = new WordAdapter(this, palabras);
         ListView listView = (ListView) findViewById(R.id.list);
-        listView.setAdapter(itemsAdapter);
+        listView.setAdapter(Adapter);
     /*
     Codigo viejo sobre los listeners que muestra un widget
     public class NumbersClickListener implements View.OnClickListener{

@@ -24,11 +24,11 @@ public class Word {
     /**
      * METODOS de la clase Word para que saquemos las traducciones
      */
-    public getDefaultTranslation(){
+    public String getDefaultTranslation(){
         return mdefaultTranslation;
     }
 
-    public getMiwokTranslation(){
+    public String getMiwokTranslation(){
         return mmikowTranslation;
     }
 
