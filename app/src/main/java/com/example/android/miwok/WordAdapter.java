@@ -47,9 +47,14 @@ public class WordAdapter extends ArrayAdapter<Word>{
         miwokTextView.setText(currentWord.getMiwokTranslation());
 
         //Obtiene el ID del imageview y la modifica con la informacion a desplegar correspondiente
-
-        ImageView imageView = (ImageView) listItemView.findViewById(R.id.iconoPalabra);
-        imageView.setImageResource(currentWord.getMimageResourceId());
+        //Primero verifica si el Word adapter contiene una imagen y si no skipea
+        if (currentWord.getMimageResourceId()!= null ) {
+            ImageView imageView = (ImageView) listItemView.findViewById(R.id.iconoPalabra);
+            imageView.setImageResource(currentWord.getMimageResourceId());
+        } else {
+            ImageView imageView = (ImageView) listItemView.findViewById(R.id.iconoPalabra);
+            imageView.setVisibility(View.GONE);
+        }
 
         return listItemView;
 
