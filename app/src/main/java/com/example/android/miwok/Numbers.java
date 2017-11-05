@@ -62,7 +62,7 @@ public class Numbers extends AppCompatActivity {
         /**
          * Manera chevere de crear los views de una lista rapido y con memoria reciclandose
          */
-        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, numbersList);
+        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.activity_list_item, numbersList);
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(itemsAdapter);
     /*
