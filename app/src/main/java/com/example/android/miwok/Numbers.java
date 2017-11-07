@@ -67,7 +67,7 @@ public class Numbers extends AppCompatActivity {
          * Manera chevere de crear los views de una lista rapido y con memoria reciclandose
          *  ahora con un adaptador custom
          */
-        WordAdapter Adapter = new WordAdapter(this, palabras);
+        WordAdapter Adapter = new WordAdapter(this, palabras, R.color.category_numbers);
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(Adapter);
     /*

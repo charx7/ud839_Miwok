@@ -3,6 +3,7 @@ package com.example.android.miwok;
 import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,9 +21,12 @@ import java.util.ArrayList;
  */
 
 public class WordAdapter extends ArrayAdapter<Word>{
+
+    private int mColorRssourceID;
     //constructor de la clase WordAdapter
-    public WordAdapter(Activity context, ArrayList<Word> palabras){
+    public WordAdapter(Activity context, ArrayList<Word> palabras, int ColorResourceID){
         super(context, 0 , palabras);
+        mColorRssourceID = ColorResourceID;
     }
 
     @Override
@@ -56,7 +60,12 @@ public class WordAdapter extends ArrayAdapter<Word>{
             imageView.setVisibility(View.GONE);
         }
 
-        return listItemView;
+        //Obtiene el objeto al que se le va a cambiar el color dinamicamente
+        View textContainer = listItemView.findViewById(R.id.contenedor_palabra);
+        //establece el int que contiene el color
+        int color = ContextCompat.getColor(getContext(),mColorRssourceID);
+        textContainer.setBackgroundColor(color);
 
+        return listItemView;
     }
 }

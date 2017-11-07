@@ -14,6 +14,7 @@
             android:src="@mipmap/ic_launcher"
             />
         <LinearLayout
+            android:id="@+id/contenedor_palabra"
             android:layout_width="match_parent"
             android:layout_height="88dp"
             android:orientation="vertical"
